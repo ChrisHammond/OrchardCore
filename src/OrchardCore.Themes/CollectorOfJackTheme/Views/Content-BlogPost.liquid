@@ -1,8 +1,8 @@
 {% zone "Header" %}
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="masthead blogpost" style="background-image: url('{{ "~/CollectorOfJackTheme/img/post-bg.jpg" | href }}')">
-        <div class="overlay"></div>
+ <header class="masthead blogpost" style="background-image: url('{{ Model.ContentItem.Content.BlogPost.BackgroundImage.Paths[0]  | asset_url | href }}')">
+    <div class="overlay"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-10 mx-auto">
@@ -27,11 +27,14 @@
 
 <div class="container page-top">
     <div class="row">
+    {% for p in Model.ContentItem.Content.BlogPost.BlogImages.Paths %}   
         <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-            <a href="/media/BlogPosts/20/JDLegacyEdition2-1.jpg" class="fancybox" rel="ligthbox">
-                <img src="/media/BlogPosts/20/JDLegacyEdition2-1.jpg?&amp;width=160" class="zoom img-fluid" alt="">  
+            <a href="{{ p | asset_url | href }}" class="fancybox" rel="ligthbox">
+                <img  src="{{ p | resize_url: width:160 | asset_url | href }}" class="zoom img-fluid "  alt="">
+                   
             </a>
-        </div>       
+        </div>
+    {% endfor %}
+        
     </div>
 </div>
-
