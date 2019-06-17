@@ -1,9 +1,9 @@
 {
-  "name": "Blog",
-  "displayName": "Blog",
-  "description": "Provides a functional Blog with CMS features.",
-  "author": "The Orchard Team",
-  "website": "https://orchardproject.net",
+  "name": "CollectorOfJackBlog",
+  "displayName": "CollectorOfJack Blog",
+  "description": "Provides a functional Blog with CMS features for CollectorOfJack.com.",
+  "author": "Christoc.com Software Solutions",
+  "website": "https://christoc.com",
   "version": "2.0",
   "issetuprecipe": true,
   "categories": [ "default" ],
@@ -576,6 +576,21 @@
               "Settings": {
                 "DisplayName": "Subtitle"
               }
+            },
+            {
+              "FieldName": "MediaField",
+              "Name": "BackgroundImage",
+              "Settings": {
+                "DisplayName": "Header Background Image"
+              }
+            },
+            {
+              "FieldName": "MediaField",
+              "Name": "BlogImages",
+              "Settings": {
+                "DisplayName": "Blog Post Image Gallery Images",
+                "Multiple": true
+              }
             }
           ]
         },
@@ -749,7 +764,7 @@
         {
           "ContentType": "Blog",
           "ContentItemId": "[js: variables('blogContentItemId')]",
-          "DisplayText":  "Blog",
+          "DisplayText": "Blog",
           "Latest": true,
           "Published": true,
           "Owner": "[js: parameters('AdminUsername')]",
@@ -867,143 +882,143 @@
       ]
     },
     {
-        "name": "AdminMenu",
-        "data": [
-          {
-            "Id": "baef6f85ad13481681cde70ada401333",
-            "Name": "Admin menu from blog recipe",
-            "Enabled": true,
-            "MenuItems": [
-              {
-                "$type": "OrchardCore.AdminMenu.AdminNodes.LinkAdminNode, OrchardCore.AdminMenu",
-                "LinkText": "Blog",
-                "LinkUrl": "[js: 'Admin/Contents/ContentItems/' +  variables('blogContentItemId') + '/Display']",
-                "IconClass": "fas fa-rss",
-                "UniqueId": "7b293d57056a4eebb3713f07f12c65d8",
-                "Enabled": true,
-                "Text": null,
-                "Id": null,
-                "Href": null,
-                "Url": null,
-                "Position": null,
-                "LinkToFirstChild": true,
-                "LocalNav": false,
-                "Culture": null,
-                "Resource": null,
-                "Items": [],
-                "RouteValues": null,
-                "Permissions": [],
-                "Classes": []
-              },
-              {
-                "$type": "OrchardCore.AdminMenu.AdminNodes.LinkAdminNode, OrchardCore.AdminMenu",
-                "LinkText": "Main Menu",                
-                "LinkUrl": "[js: 'Admin/Contents/ContentItems/' +  variables('menuContentItemId') + '/Edit']",
-                "IconClass": "fas fa-sitemap",
-                "UniqueId": "5118cecfde834dacb26ac08980f1b5a7",
-                "Enabled": true,
-                "Text": null,
-                "Id": null,
-                "Href": null,
-                "Url": null,
-                "Position": null,
-                "LinkToFirstChild": true,
-                "LocalNav": false,
-                "Culture": null,
-                "Resource": null,
-                "Items": [],
-                "RouteValues": null,
-                "Permissions": [],
-                "Classes": []
-              },
-              {
-                "$type": "OrchardCore.AdminMenu.AdminNodes.PlaceholderAdminNode, OrchardCore.AdminMenu",
-                "LinkText": "Content",
-                "IconClass": null,
-                "UniqueId": "3e590d44f8704e4588e272dd966ce291",
-                "Enabled": true,
-                "Text": null,
-                "Id": null,
-                "Href": null,
-                "Url": null,
-                "Position": null,
-                "LinkToFirstChild": true,
-                "LocalNav": false,
-                "Culture": null,
-                "Resource": null,
-                "Items": [
-                  {
-                    "$type": "OrchardCore.AdminMenu.AdminNodes.LinkAdminNode, OrchardCore.AdminMenu",
-                    "LinkText": "Content Items",
-                    "LinkUrl": "Admin/Contents/ContentItems/",
-                    "IconClass": null,
-                    "UniqueId": "7b293d57056a4eebb3713f07f12c65d9",
-                    "Enabled": true,
-                    "Text": null,
-                    "Id": null,
-                    "Href": null,
-                    "Url": null,
-                    "Position": 0,
-                    "LinkToFirstChild": true,
-                    "LocalNav": false,
-                    "Culture": null,
-                    "Resource": null,
-                    "Items": [],
-                    "RouteValues": null,
-                    "Permissions": [],
-                    "Classes": []
-                  },
-                  {
-                    "$type": "OrchardCore.AdminMenu.AdminNodes.PlaceholderAdminNode, OrchardCore.AdminMenu",
-                    "LinkText": "Content Types",
-                    "IconClass": null,
-                    "UniqueId": "2f1fc33133334a1abf7d1a0516ee8b4e",
-                    "Enabled": true,
-                    "Text": null,
-                    "Id": null,
-                    "Href": null,
-                    "Url": null,
-                    "Position": 1,
-                    "Priority": 50,
-                    "LinkToFirstChild": true,
-                    "LocalNav": false,
-                    "Culture": null,
-                    "Resource": null,
-                    "Items": [
-                      {
-                        "$type": "OrchardCore.Contents.AdminNodes.ContentTypesAdminNode, OrchardCore.Contents",
-                        "ShowAll": true,
-                        "IconClass": null,
-                        "ContentTypes": [],
-                        "UniqueId": "ee18224e1b814c638b0732678b74cfd9",
-                        "Enabled": true,
-                        "Text": null,
-                        "Id": null,
-                        "Href": null,
-                        "Url": null,
-                        "Position": null,
-                        "LinkToFirstChild": true,
-                        "LocalNav": false,
-                        "Culture": null,
-                        "Resource": null,
-                        "Items": [],
-                        "RouteValues": null,
-                        "Permissions": [],
-                        "Classes": []
-                      }
-                    ],
-                    "RouteValues": null,
-                    "Permissions": [],
-                    "Classes": []
-                  }
-                ],
-                "RouteValues": null,
-                "Permissions": [],
-                "Classes": []
-              }
-            ]
-          } 
-        ]
+      "name": "AdminMenu",
+      "data": [
+        {
+          "Id": "baef6f85ad13481681cde70ada401333",
+          "Name": "Admin menu from blog recipe",
+          "Enabled": true,
+          "MenuItems": [
+            {
+              "$type": "OrchardCore.AdminMenu.AdminNodes.LinkAdminNode, OrchardCore.AdminMenu",
+              "LinkText": "Blog",
+              "LinkUrl": "[js: 'Admin/Contents/ContentItems/' +  variables('blogContentItemId') + '/Display']",
+              "IconClass": "fas fa-rss",
+              "UniqueId": "7b293d57056a4eebb3713f07f12c65d8",
+              "Enabled": true,
+              "Text": null,
+              "Id": null,
+              "Href": null,
+              "Url": null,
+              "Position": null,
+              "LinkToFirstChild": true,
+              "LocalNav": false,
+              "Culture": null,
+              "Resource": null,
+              "Items": [],
+              "RouteValues": null,
+              "Permissions": [],
+              "Classes": []
+            },
+            {
+              "$type": "OrchardCore.AdminMenu.AdminNodes.LinkAdminNode, OrchardCore.AdminMenu",
+              "LinkText": "Main Menu",
+              "LinkUrl": "[js: 'Admin/Contents/ContentItems/' +  variables('menuContentItemId') + '/Edit']",
+              "IconClass": "fas fa-sitemap",
+              "UniqueId": "5118cecfde834dacb26ac08980f1b5a7",
+              "Enabled": true,
+              "Text": null,
+              "Id": null,
+              "Href": null,
+              "Url": null,
+              "Position": null,
+              "LinkToFirstChild": true,
+              "LocalNav": false,
+              "Culture": null,
+              "Resource": null,
+              "Items": [],
+              "RouteValues": null,
+              "Permissions": [],
+              "Classes": []
+            },
+            {
+              "$type": "OrchardCore.AdminMenu.AdminNodes.PlaceholderAdminNode, OrchardCore.AdminMenu",
+              "LinkText": "Content",
+              "IconClass": null,
+              "UniqueId": "3e590d44f8704e4588e272dd966ce291",
+              "Enabled": true,
+              "Text": null,
+              "Id": null,
+              "Href": null,
+              "Url": null,
+              "Position": null,
+              "LinkToFirstChild": true,
+              "LocalNav": false,
+              "Culture": null,
+              "Resource": null,
+              "Items": [
+                {
+                  "$type": "OrchardCore.AdminMenu.AdminNodes.LinkAdminNode, OrchardCore.AdminMenu",
+                  "LinkText": "Content Items",
+                  "LinkUrl": "Admin/Contents/ContentItems/",
+                  "IconClass": null,
+                  "UniqueId": "7b293d57056a4eebb3713f07f12c65d9",
+                  "Enabled": true,
+                  "Text": null,
+                  "Id": null,
+                  "Href": null,
+                  "Url": null,
+                  "Position": 0,
+                  "LinkToFirstChild": true,
+                  "LocalNav": false,
+                  "Culture": null,
+                  "Resource": null,
+                  "Items": [],
+                  "RouteValues": null,
+                  "Permissions": [],
+                  "Classes": []
+                },
+                {
+                  "$type": "OrchardCore.AdminMenu.AdminNodes.PlaceholderAdminNode, OrchardCore.AdminMenu",
+                  "LinkText": "Content Types",
+                  "IconClass": null,
+                  "UniqueId": "2f1fc33133334a1abf7d1a0516ee8b4e",
+                  "Enabled": true,
+                  "Text": null,
+                  "Id": null,
+                  "Href": null,
+                  "Url": null,
+                  "Position": 1,
+                  "Priority": 50,
+                  "LinkToFirstChild": true,
+                  "LocalNav": false,
+                  "Culture": null,
+                  "Resource": null,
+                  "Items": [
+                    {
+                      "$type": "OrchardCore.Contents.AdminNodes.ContentTypesAdminNode, OrchardCore.Contents",
+                      "ShowAll": true,
+                      "IconClass": null,
+                      "ContentTypes": [],
+                      "UniqueId": "ee18224e1b814c638b0732678b74cfd9",
+                      "Enabled": true,
+                      "Text": null,
+                      "Id": null,
+                      "Href": null,
+                      "Url": null,
+                      "Position": null,
+                      "LinkToFirstChild": true,
+                      "LocalNav": false,
+                      "Culture": null,
+                      "Resource": null,
+                      "Items": [],
+                      "RouteValues": null,
+                      "Permissions": [],
+                      "Classes": []
+                    }
+                  ],
+                  "RouteValues": null,
+                  "Permissions": [],
+                  "Classes": []
+                }
+              ],
+              "RouteValues": null,
+              "Permissions": [],
+              "Classes": []
+            }
+          ]
+        }
+      ]
     }
   ]
 }
