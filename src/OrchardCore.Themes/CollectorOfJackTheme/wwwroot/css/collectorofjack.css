@@ -1,0 +1,61 @@
+/*!
+ * Overrides for CollectorOfJack.com theme
+ */
+
+header.blog {
+    background-image: url('/CollectorOfJackTheme/img/home-bg.jpg');
+}
+
+header.blogpost {
+    background-image: url('/CollectorOfJackTheme/img/post-bg.jpg');
+}
+
+header.about {
+    background-image: url('/CollectorOfJackTheme/img/about-bg.jpg');
+}
+
+.post_thumb {
+    float: left;
+    padding: 10px 15px 0 0;
+}
+
+.btn:focus, .btn:active, button:focus, button:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+#image-gallery .modal-footer {
+    display: block;
+}
+
+.thumb {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+img.zoom {
+    width: 160px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+}
+
+.transition {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-title {
+    color: #000;
+}
+
+.modal-footer {
+    display: none;
+}
