@@ -29,8 +29,8 @@
     <div class="row">
     {% for p in Model.ContentItem.Content.BlogPost.BlogImages.Paths %}   
         <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-            <a href="{{ p | asset_url | href }}" class="fancybox" rel="ligthbox">
-                <img  src="{{ p | resize_url: width:160 | asset_url | href }}" class="zoom img-fluid "  alt="">
+            <a href="{{ p | asset_url | href }}" class="fancybox" data-fancybox="gallery"  >
+                <img  src="{{ p | resize_url: width:160 | asset_url | href }}" class="zoom img-fluid "  alt="Collector Of Jack Blog Post Photo">
                    
             </a>
         </div>
